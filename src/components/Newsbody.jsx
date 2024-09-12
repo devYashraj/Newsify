@@ -8,6 +8,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Typography } from '@mui/material';
+import { formatDate } from '../Utils.js';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -53,7 +54,7 @@ export default function Newsbody({ open, handleClickOpen, handleClose, content }
                                 {content.source.name}
                             </Typography>
                             <Typography variant='body2' sx={{ m: 1, color: 'text.secondary' }}>
-                                {content.publishedAt}
+                                {formatDate(content.publishedAt)}
                             </Typography>
                             <Typography variant="body2" sx={{ m: 1, color: 'text.secondary' }}>
                                 {content.description}
@@ -63,10 +64,10 @@ export default function Newsbody({ open, handleClickOpen, handleClose, content }
                             </Typography>
                         </CardContent>
                         <CardActions sx={{ justifyContent: 'space-between' }}>
-                            <Button size="small" onClick={() => window.open(content.url, '_blank')} sx={{ml:1}}>
+                            <Button size="small" onClick={() => window.open(content.url, '_blank')} sx={{ ml: 1 }}>
                                 Source
                             </Button>
-                            <Button size="small" onClick={handleClose}  sx={{mr:1}}>
+                            <Button size="small" onClick={handleClose} sx={{ mr: 1 }}>
                                 OK
                             </Button>
                         </CardActions>

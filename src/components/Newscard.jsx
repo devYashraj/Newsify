@@ -5,24 +5,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Newsbody from './Newsbody.jsx';
+import {formatDate} from '../Utils.js'
 
 export default function Newscard({ content }) {
-  function formatDate(dateString) {
-    const date = new Date(dateString);
-    const formattedDate = date.toLocaleDateString('en-US', {
-      day: 'numeric',
-      month: 'numeric',
-      year: 'numeric',
-    });
-
-    const formattedTime = date.toLocaleTimeString('en-US', {
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true 
-    });
-
-    return `${formattedDate}, ${formattedTime}`;
-  }
+ 
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {

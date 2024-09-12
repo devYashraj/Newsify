@@ -32,12 +32,12 @@ export default function Feed({title, news}) {
                 </Typography>
                 <Grid2
                     container
-                    spacing={{ xs: 2, md: 8 }}
-                    columns={{ xs: 4, sm: 8, md: 12 }}
+                    spacing={{ xs: 2, md: 4 }}
+                    columns={{ xs: 2, sm: 8, md: 12 }}
                     justifyContent="center"
                 >
                     {currentArticles.map((content, index) => (
-                        <Grid2 xs={6} sm={4} md={4} key={index}>
+                        <Grid2 xs={2} sm={4} md={4} key={index}>
                             <Newsbody content={content} />
                         </Grid2>
                     ))}

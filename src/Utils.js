@@ -1,3 +1,20 @@
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  const formattedDate = date.toLocaleDateString('en-US', {
+    day: 'numeric',
+    month: 'numeric',
+    year: 'numeric',
+  });
+
+  const formattedTime = date.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true 
+  });
+
+  return `${formattedDate}, ${formattedTime}`;
+}
+
 const countries = [
     { label: 'Australia', code: 'au' },
     { label: 'Brazil', code: 'br' },
@@ -182,4 +199,4 @@ const samplenews = {
     ]
   }
 
-export {countries, categories, languages};
+export {countries, categories, languages, formatDate};
