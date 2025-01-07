@@ -5,6 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   define:{
-    baseUrl: '"https://acoserver-devyashraj.onrender.com/api/"'
+    baseUrl: '"https://localhost:3000/api/"'
   }
 })
